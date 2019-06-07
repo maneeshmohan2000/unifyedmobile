@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
 class AcademicWidget extends Component {
-    state = {
-        data: 'Version 1.0',
-    }
 
     render() {
         return (
@@ -14,7 +11,6 @@ class AcademicWidget extends Component {
                 <Text>Degree Program</Text>
                 <Text>GPA: 3.89</Text>
                 <Text>Credits Earned: 75/100</Text>
-                <Text>{this.state.data}</Text>
             </View>
         );
     }

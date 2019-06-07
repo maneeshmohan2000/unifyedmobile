@@ -5,26 +5,24 @@ import codePush from "react-native-code-push";
 import AcademicWidget from './Applet';
 
 class Dashboard extends Component {
-    render() {
-        onButtonPress = () => {
-            codePush.sync({
-              updateDialog: true,
-              installMode: codePush.InstallMode.IMMEDIATE
-            });
-          }
 
+    onButtonPress = () => {
+        codePush.sync({
+          updateDialog: true,
+          installMode: codePush.InstallMode.IMMEDIATE
+        });
+      }
+
+    render() {
         return (
             <View style={styles.container}>
                 <View style={styles.widget}>
                     <Text>Welcome to Unifyed</Text>
-                    <Text></Text>
+                    <Text>Demo app</Text>
                 </View>
                 <AcademicWidget />
                 <View style={styles.widget}>                    
-                    <Button 
-                        title="Refresh Me"
-                        accessibilityLabel="Refresh metadata for academic progress"
-                    />
+                    <Text>Version 1.0</Text>
                 </View>
                 <View>
                     <TouchableOpacity onPress={this.onButtonPress}>
