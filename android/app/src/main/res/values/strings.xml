@@ -1,3 +1,4 @@
 <resources>
+	<string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">mPokYbrNrhMSIyb5ck-a-H7mp75mrkM7s2PRV</string>
     <string name="app_name">unifyedmobile</string>
 </resources>

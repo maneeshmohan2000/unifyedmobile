@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import codePush from "react-native-code-push";
 
 import AcademicWidget from './Applet';
 
 class Dashboard extends Component {
     render() {
+        onButtonPress = () => {
+            codePush.sync({
+              updateDialog: true,
+              installMode: codePush.InstallMode.IMMEDIATE
+            });
+          }
+
         return (
             <View style={styles.container}>
                 <View style={styles.widget}>
@@ -18,7 +26,11 @@ class Dashboard extends Component {
                         accessibilityLabel="Refresh metadata for academic progress"
                     />
                 </View>
-                
+                <View>
+                    <TouchableOpacity onPress={this.onButtonPress}>
+                        <Text>Check for updates</Text>
+                    </TouchableOpacity>
+                </View>                
             </View>
         );
     }
