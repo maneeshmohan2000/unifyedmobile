@@ -3,7 +3,7 @@ import { View, Text, Button, StyleSheet } from 'react-native';
 
 class AcademicWidget extends Component {
     state = {
-        data: '',
+        data: 'Version 1.0',
     }
 
     render() {
@@ -13,7 +13,7 @@ class AcademicWidget extends Component {
                 <Text>Academic Progress</Text>
                 <Text>Degree Program</Text>
                 <Text>GPA: 3.89</Text>
-                <Text>Credits Earned: 85/100</Text>
+                <Text>Credits Earned: 75/100</Text>
                 <Text>{this.state.data}</Text>
             </View>
         );
